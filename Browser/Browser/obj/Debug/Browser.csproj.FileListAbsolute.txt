@@ -1,0 +1,14 @@
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\bin\Debug\Browser.exe.config
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\bin\Debug\Browser.exe
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\bin\Debug\Browser.pdb
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.csproj.AssemblyReference.cache
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.Form1.resources
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.cache
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.csproj.CoreCompileInputs.cache
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.exe
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.pdb
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\bin\Debug\Browser.exe.manifest
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\bin\Debug\Browser.application
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.exe.manifest
+C:\Users\devts\OneDrive\Desktop\Projects\VS Projects\Browser\Browser\obj\Debug\Browser.application
