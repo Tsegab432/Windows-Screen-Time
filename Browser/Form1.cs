@@ -29,14 +29,37 @@ namespace Browser
             this.TransparencyKey = Color.Empty;
         }
 
+        public void CloseAllApplications()
+        {
+            // Get all running processes
+            Process[] processes = Process.GetProcesses();
+
+            // Iterate through each process and close it
+            foreach (Process process in processes)
+            {
+                try
+                {
+                    // Close the process
+                    process.CloseMainWindow();
+                    process.WaitForExit(); // Optionally wait for the process to exit
+                }
+                catch (Exception ex)
+                {
+                    // Handle any exceptions (e.g., access denied)
+                    Console.WriteLine($"Error closing process {process.ProcessName}: {ex.Message}");
+                }
+            }
+
+            Console.WriteLine("All applications closed.");
+        }
+
         private async void buttonclickchecker()
         {
             if (!isClicked)
             {
                 ShowAutoCloseMessageBox("Click the button in 3 seconds or it will auto start!", "Warning", 1000);
-                await Task.Delay(3000);
+                await Task.Delay(20);
                 button1.PerformClick();
-
             }
         }
         #region //Main_button (start button)
@@ -113,8 +136,8 @@ namespace Browser
                         ShowAutoCloseMessageBox($"Shutting down computer in {s} seconds.", "Countdown", 1000);
                         await Task.Delay(1000);
                     }
-
-                    // Shut down the computer
+                    CloseAllApplications();
+                    await Task.Delay(500);
                     Process.Start("shutdown", "/s /t 0");
 
                     // Log the usage for today
@@ -163,6 +186,7 @@ namespace Browser
 
         private void label1_Click(object sender, EventArgs e)
         {
+
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -272,9 +296,10 @@ namespace Browser
         {
             string password = textBox1.Text;
 
-            if(password == "#7!pLzXq@9w$5rJ2Y3tU6iO8lK0nM4bV1cGfAxDhEjR5yT6uI8oP0zL1kN3jH4gB7vC2F9mQ2eR4xW7sD1uZ8\r\n")
+            if(password == "784205936419572128859343677241")
             {
                 textBox1.Visible = false;
+                textBox1.Enabled = false;
                 button2.Visible = false;
                 panel1.Visible = false;
                 label3.Visible = false;
@@ -357,6 +382,7 @@ namespace Browser
 
                 // Add the Series to the Chart.
                 chart1.Series.Add(series);
+                chart1.Series.Add(series);
             }
             catch (IOException ex)
             {
@@ -375,7 +401,7 @@ namespace Browser
         {
             string password = textBox2.Text;
 
-            if (password == "#7!pLzXq@9w$5rJ2Y3tU6iO8lK0nM4bV1cGfAxDhEjR5yT6uI8oP0zL1kN3jH4gB7vC2F9mQ2eR4xW7sD1uZ8\r\n")
+            if (password == "784205936419572128859343677241")
             {
                 textBox1.Visible = false;
                 button2.Visible = false;
@@ -384,8 +410,8 @@ namespace Browser
             }
             else
             {
-                label3.ForeColor = Color.Red;
-                label3.Text = "That is not the correct password!";
+                label6.ForeColor = Color.Red;
+                label6.Text = "That is not the correct password!";
             }
         }
 
@@ -423,10 +449,6 @@ namespace Browser
             {
                 chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
             }
-            else if (selectedChartType == "Pie")
-            {
-                chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            }
             else if (selectedChartType == "Doughnut")
             {
                 chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -461,6 +483,11 @@ namespace Browser
             }
         }
         #endregion
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class AutoCloseForm : Form
