@@ -58,7 +58,7 @@ namespace Browser
             if (!isClicked)
             {
                 ShowAutoCloseMessageBox("Click the button in 3 seconds or it will auto start!", "Warning", 1000);
-                await Task.Delay(20);
+                await Task.Delay(200);
                 button1.PerformClick();
             }
         }
@@ -228,8 +228,6 @@ namespace Browser
         {
             if (keyData == (Keys.Alt | Keys.F4))
             {
-                // Handle Alt + F4 by preventing the form from closing
-                this.Hide();
                 return true; // Indicate that the key has been handled
             }
 
@@ -381,7 +379,6 @@ namespace Browser
                 series.Points.AddY(numberOfLines);
 
                 // Add the Series to the Chart.
-                chart1.Series.Add(series);
                 chart1.Series.Add(series);
             }
             catch (IOException ex)
